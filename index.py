@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes.cow import route
+from routes.scm import scm
 app = FastAPI()
 origins = [
     "http://localhost:54913",
@@ -15,3 +16,4 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.include_router(route)
+app.include_router(scm)
