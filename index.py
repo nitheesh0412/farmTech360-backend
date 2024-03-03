@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes.cow import route
 from routes.scm import scm
+from routes.lsd import lsd
 app = FastAPI()
 origins = [
     "http://localhost:54913",
@@ -17,3 +18,4 @@ app.add_middleware(
 )
 app.include_router(route)
 app.include_router(scm)
+app.include_router(lsd)
