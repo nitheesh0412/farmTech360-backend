@@ -5,6 +5,7 @@ from datetime import datetime
 
 class Cow(BaseModel):
   id : str
+  sex : str
   age : int
 
 class dates(BaseModel):
